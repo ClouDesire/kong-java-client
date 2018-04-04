@@ -26,6 +26,10 @@
             <name>Vaibhav Sinha</name>
             <email>vaibhavsinh@gmail.com</email>
         </developer>
+        <developer>
+            <name>Matteo Giordano</name>
+            <email>matteo.giordano@cloudesire.com</email>
+        </developer>
     </developers>
 
     <scm>
