@@ -8,6 +8,8 @@ public interface ServiceService
 {
     Service createService(Service request);
 
+    Service getService(String nameOrId);
+
     Plugin createServicePlugin(String service, Plugin request);
 
     Route createServiceRoute(String service, Route request);
