@@ -2,6 +2,7 @@ package com.github.vaibhavsinha.kong.internal.admin;
 
 import com.github.vaibhavsinha.kong.model.admin.plugin.Plugin;
 import com.github.vaibhavsinha.kong.model.admin.service.Route;
+import com.github.vaibhavsinha.kong.model.admin.service.RouteList;
 import com.github.vaibhavsinha.kong.model.admin.service.Service;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -19,6 +20,9 @@ public interface RetrofitServiceService
 
     @POST("services/{service}/plugins")
     Call<Plugin> createServicePlugin(@Path("service") String service, @Body Plugin request);
+
+    @GET("services/{service}/routes")
+    Call<RouteList> getServiceRoutes(@Path("service") String service);
 
     @POST("services/{service}/routes")
     Call<Route> createServiceRoute(@Path("service") String service, @Body Route request);
