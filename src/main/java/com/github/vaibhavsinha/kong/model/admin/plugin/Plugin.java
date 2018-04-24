@@ -3,8 +3,6 @@ package com.github.vaibhavsinha.kong.model.admin.plugin;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
-import java.util.Map;
-
 /**
  * Created by vaibhav on 13/06/17.
  *
@@ -22,11 +20,15 @@ public class Plugin {
     @SerializedName("id")
     private String id;
 
+    @Deprecated
     @SerializedName("api_id")
     private String apiId;
 
     @SerializedName("consumer_id")
     private String consumerId;
+
+    @SerializedName("route_id")
+    private String routeId;
 
     @SerializedName("name")
     private String name;    //must
