@@ -10,6 +10,8 @@ public class Route
 {
     private String id;
 
+    private List<String> hosts;
+
     private List<String> paths;
 
     @SerializedName("strip_path")
