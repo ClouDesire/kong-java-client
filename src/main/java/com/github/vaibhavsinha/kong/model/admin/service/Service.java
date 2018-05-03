@@ -10,4 +10,6 @@ public class Service
     private String name;
 
     private String url;
+
+    private String host;
 }
