@@ -33,6 +33,7 @@ public class KongClient {
     private PluginRepoService pluginRepoService;
 
     private ServiceService serviceService;
+    private RouteService routeService;
 
     private CertificateService certificateService;
     private SniService sniService;
@@ -82,6 +83,7 @@ public class KongClient {
         pluginRepoService = retrofitServiceCreatorForAdminUrl.create(PluginRepoService.class, RetrofitPluginRepoService.class);
 
         serviceService = retrofitServiceCreatorForAdminUrl.create(ServiceService.class, RetrofitServiceService.class);
+        routeService = retrofitServiceCreatorForAdminUrl.create(RouteService.class, RetrofitRouteService.class);
 
         certificateService = retrofitServiceCreatorForAdminUrl.create(CertificateService.class, RetrofitCertificateService.class);
         sniService = retrofitServiceCreatorForAdminUrl.create(SniService.class, RetrofitSniService.class);
