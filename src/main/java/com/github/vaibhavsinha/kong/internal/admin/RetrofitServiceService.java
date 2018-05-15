@@ -4,8 +4,10 @@ import com.github.vaibhavsinha.kong.model.admin.plugin.Plugin;
 import com.github.vaibhavsinha.kong.model.admin.service.Route;
 import com.github.vaibhavsinha.kong.model.admin.service.RouteList;
 import com.github.vaibhavsinha.kong.model.admin.service.Service;
+import com.github.vaibhavsinha.kong.model.admin.service.ServiceList;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -26,4 +28,10 @@ public interface RetrofitServiceService
 
     @POST("services/{service}/routes")
     Call<Route> createServiceRoute(@Path("service") String service, @Body Route request);
+
+    @DELETE("services/{id}")
+    Call<Void> deleteService(@Path("id") String nameOrId);
+
+    @GET("services")
+    Call<ServiceList> listServices();
 }
