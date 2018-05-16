@@ -12,4 +12,6 @@ public class Service
     private String url;
 
     private String host;
+
+    private Integer port;
 }
