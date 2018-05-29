@@ -20,6 +20,12 @@ public class Plugin {
     @SerializedName("id")
     private String id;
 
+    @SerializedName("service_id")
+    private String serviceId;
+
+    /**
+     * @deprecated by {@link #serviceId}
+     */
     @Deprecated
     @SerializedName("api_id")
     private String apiId;
