@@ -15,9 +15,13 @@ public class KongClientException extends RuntimeException {
         super(message);
     }
 
-    public KongClientException(String message, int code, String error) {
-        super(message);
+    public KongClientException(String message, int code) {
+        this(message);
         this.code = code;
+    }
+
+    public KongClientException(String message, int code, String error) {
+        this(message, code);
         this.error = error;
     }
 

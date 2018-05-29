@@ -28,8 +28,8 @@ public class RetrofitBodyExtractorInvocationHandler implements InvocationHandler
         Response response = call.execute();
         log.debug("Http Request:  " + response.raw().request());
         log.debug("Http Response: " + response.raw().toString());
-        if(!response.isSuccessful()) {
-            throw new KongClientException(response.errorBody() != null ? response.errorBody().string() : String.valueOf(response.code()));
+        if (!response.isSuccessful()) {
+            throw new KongClientException(response.message(), response.code());
         }
         return response.body();
     }
