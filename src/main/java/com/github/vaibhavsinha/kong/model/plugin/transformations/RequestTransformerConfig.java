@@ -1,16 +1,15 @@
 package com.github.vaibhavsinha.kong.model.plugin.transformations;
 
-import com.github.vaibhavsinha.kong.model.plugin.trafficcontrol.requesttermination.RequestObjects;
 import lombok.Data;
 
 @Data
 public class RequestTransformerConfig
 {
-    RequestObjects remove;
+    RequestParts remove;
 
-    RequestObjects rename;
+    RequestParts rename;
 
-    RequestObjects append;
+    RequestParts append;
 
-    RequestObjects add;
+    RequestParts add;
 }
