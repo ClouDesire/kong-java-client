@@ -10,6 +10,8 @@ public class Route
 {
     private String id;
 
+    private List<String> methods;
+
     private List<String> hosts;
 
     private List<String> paths;
