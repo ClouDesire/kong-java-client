@@ -7,4 +7,5 @@ public class StatsdConfig
 {
     String host;
     String port;
+    String prefix;
 }
