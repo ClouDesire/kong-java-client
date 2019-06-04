@@ -11,14 +11,14 @@ import java.util.Date;
 /**
  * Created by fanhua on 2017-07-28.
  */
-public class BaseTest {
+public abstract class BaseTest {
 
-	public static final String KONG_ADMIN_URL = "http://test.com:8001";
-	public static final String KONG_API_URL = "https://test.com:8443";
+	private static final String KONG_ADMIN_URL = "http://test.com:8001";
+	private static final String KONG_API_URL = "https://test.com:8443";
 
 	protected static KongClient kongClient;
 
-	protected Gson gson;
+	private Gson gson;
 
 	@Before
 	public void before() {
