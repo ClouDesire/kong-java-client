@@ -4,9 +4,6 @@ jobs:
   build:
     machine: true
 
-    environment:
-      CI_SCRIPTS_BRANCH: master
-
     steps:
 
       - checkout
@@ -19,25 +16,11 @@ jobs:
           name: Build
           command: ./mvnw -B install -Dmaven.test.skip=true
 
-      - run: git clone -b $CI_SCRIPTS_BRANCH git@github.com:ClouDesire/ci-scripts.git
-
-      - run:
-          name: Run Sonar
-          command: |
-            source ci-scripts/sonar.sh
-            run_sonar
-
       - save_cache:
           key: m2-{{ checksum "pom.xml" }}-v2
           paths:
             - "~/.m2"
             - "~/.sonar/cache"
-
-      - run: docker-compose up -d
-
-      - run:
-          name: Run Tests
-          command: ./mvnw -B verify
 
       - run:
           name: Deploy artifacts
