@@ -2,10 +2,10 @@ version: 2
 
 jobs:
   build:
-    docker:
-      - image: openjdk:8-jdk
-        environment:
-          CI_SCRIPTS_BRANCH: master
+    machine: true
+
+    environment:
+      CI_SCRIPTS_BRANCH: master
 
     steps:
 
@@ -32,6 +32,8 @@ jobs:
           paths:
             - "~/.m2"
             - "~/.sonar/cache"
+
+      - run: docker-compose up -d
 
       - run:
           name: Run Tests

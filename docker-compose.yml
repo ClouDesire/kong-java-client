@@ -1,0 +1,40 @@
+version: "2"
+
+services:
+  kong-database:
+    image: postgres:9.6.2-alpine
+    container_name: kong-database
+    command: -c fsync=off -c full_page_writes=off
+    environment:
+      POSTGRES_USER: kong
+      POSTGRES_DB: kong
+  kong-migrate:
+    image: kong:0.13.1-alpine
+    container_name: kong-migrate
+    command: kong migrations up
+    restart: on-failure
+    depends_on:
+      - kong-database
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+  kong:
+    image: kong:0.13.1-alpine
+    container_name: kong
+    restart: on-failure
+    depends_on:
+      - kong-database
+      - kong-migrate
+    environment:
+      KONG_DATABASE: postgres
+      KONG_PG_HOST: kong-database
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+    ports:
+      - 8000:8000
+      - 8443:8443
+      - 8001:8001
+      - 8444:8444
