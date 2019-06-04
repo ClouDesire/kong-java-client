@@ -4,8 +4,6 @@ import com.github.vaibhavsinha.kong.api.plugin.authentication.HmacAuthService;
 import com.github.vaibhavsinha.kong.exception.KongClientException;
 import com.github.vaibhavsinha.kong.internal.plugin.authentication.RetrofitHmacAuthService;
 import com.github.vaibhavsinha.kong.model.plugin.authentication.hmac.HmacAuthCredential;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
 

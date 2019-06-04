@@ -1,6 +1,5 @@
 package com.github.vaibhavsinha.kong.api.admin;
 
-import com.github.vaibhavsinha.kong.model.admin.plugin.EnabledPlugins;
 import com.github.vaibhavsinha.kong.model.admin.plugin.Plugin;
 import com.github.vaibhavsinha.kong.model.admin.plugin.PluginList;
 

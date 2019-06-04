@@ -3,8 +3,6 @@ package com.github.vaibhavsinha.kong.model.plugin.authentication.ldap;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
-import java.util.List;
-
 /**
  * Created by vaibhav on 17/06/17.
  */

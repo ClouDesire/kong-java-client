@@ -1,13 +1,15 @@
 package com.github.vaibhavsinha.kong.impl.helper;
 
 //import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
 import com.github.vaibhavsinha.kong.utils.HttpsUtil;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-//import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
-//import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.lang.reflect.Proxy;
+
+//import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+//import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by vaibhav on 13/06/17.

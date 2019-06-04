@@ -3,7 +3,12 @@ package com.github.vaibhavsinha.kong.internal.admin;
 import com.github.vaibhavsinha.kong.model.admin.target.Target;
 import com.github.vaibhavsinha.kong.model.admin.target.TargetList;
 import retrofit2.Call;
-import retrofit2.http.*;
+import retrofit2.http.Body;
+import retrofit2.http.DELETE;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by vaibhav on 13/06/17.

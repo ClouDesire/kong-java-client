@@ -3,7 +3,13 @@ package com.github.vaibhavsinha.kong.internal.admin;
 import com.github.vaibhavsinha.kong.model.admin.sni.Sni;
 import com.github.vaibhavsinha.kong.model.admin.sni.SniList;
 import retrofit2.Call;
-import retrofit2.http.*;
+import retrofit2.http.Body;
+import retrofit2.http.DELETE;
+import retrofit2.http.GET;
+import retrofit2.http.PATCH;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 /**
  * Created by vaibhav on 12/06/17.

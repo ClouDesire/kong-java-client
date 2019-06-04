@@ -4,8 +4,6 @@ import com.github.vaibhavsinha.kong.api.plugin.authentication.BasicAuthService;
 import com.github.vaibhavsinha.kong.exception.KongClientException;
 import com.github.vaibhavsinha.kong.internal.plugin.authentication.RetrofitBasicAuthService;
 import com.github.vaibhavsinha.kong.model.plugin.authentication.basic.BasicAuthCredential;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
 
