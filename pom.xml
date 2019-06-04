@@ -39,7 +39,7 @@
 	<properties>
 		<retrofit.version>2.5.0</retrofit.version>
 		<lombok.version>1.16.16</lombok.version>
-		<slf4j.version>1.6.2</slf4j.version>
+		<slf4j.version>1.7.26</slf4j.version>
 		<jcl.version>1.1</jcl.version>
 		<log4j.version>1.2.16</log4j.version>
 		<logback.version>1.0.6</logback.version>
@@ -80,6 +80,12 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
