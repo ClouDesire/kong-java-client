@@ -41,7 +41,7 @@ public class RetrofitServiceCreator {
         if (supportHttps) {
             HttpsUtil.SSLParams sslParams = HttpsUtil.getSslSocketFactory(null, null, null);
             return new OkHttpClient.Builder()
-                    .sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager)
+                    .sslSocketFactory(sslParams.getSslSocketFactory(), sslParams.getTrustManager())
                     .build();
         }
 
