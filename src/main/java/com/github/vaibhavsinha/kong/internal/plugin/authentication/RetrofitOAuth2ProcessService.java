@@ -1,8 +1,12 @@
 package com.github.vaibhavsinha.kong.internal.plugin.authentication;
 
-import com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2.*;
+import com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2.AuthorizationRequest;
+import com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2.GrantTokenRequest;
+import com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2.Token;
 import retrofit2.Call;
-import retrofit2.http.*;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 import java.util.Map;
 

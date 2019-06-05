@@ -1,6 +1,5 @@
 package com.github.vaibhavsinha.kong.api.admin;
 
-import com.github.vaibhavsinha.kong.model.admin.plugin.EnabledPlugins;
 import com.github.vaibhavsinha.kong.model.admin.plugin.Plugin;
 import com.github.vaibhavsinha.kong.model.admin.plugin.PluginList;
 
@@ -23,6 +22,9 @@ public interface PluginService {
 
     Plugin updatePlugin(String nameOrId, Plugin request);
 
+    /**
+     * @deprecated use {@link #addPlugin(Plugin)} or {@link #updatePlugin(String, Plugin)}
+     */
     @Deprecated
     Plugin createOrUpdatePlugin(Plugin request);
 

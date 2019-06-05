@@ -1,7 +1,6 @@
 package com.github.vaibhavsinha.kong.model.plugin.authentication.oauth2;
 
 import com.google.gson.annotations.SerializedName;
-
 import lombok.Data;
 
 /**

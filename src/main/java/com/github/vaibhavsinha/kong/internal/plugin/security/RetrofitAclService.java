@@ -3,7 +3,11 @@ package com.github.vaibhavsinha.kong.internal.plugin.security;
 import com.github.vaibhavsinha.kong.model.plugin.security.acl.Acl;
 import com.github.vaibhavsinha.kong.model.plugin.security.acl.AclList;
 import retrofit2.Call;
-import retrofit2.http.*;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
  * Created by vaibhav on 18/06/17.

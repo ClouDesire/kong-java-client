@@ -2,7 +2,6 @@ package com.github.vaibhavsinha.kong.internal.admin;
 
 import com.github.vaibhavsinha.kong.model.admin.plugin.Plugin;
 import com.github.vaibhavsinha.kong.model.admin.plugin.PluginList;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
