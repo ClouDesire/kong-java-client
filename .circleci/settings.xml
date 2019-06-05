@@ -4,6 +4,11 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<servers>
 		<server>
+			<id>archiva</id>
+			<username>${env.ARTIFACTORY_USER}</username>
+			<password>${env.ARTIFACTORY_PASS}</password>
+		</server>
+		<server>
 			<id>snapshots</id>
 			<username>${env.ARTIFACTORY_USER}</username>
 			<password>${env.ARTIFACTORY_PASS}</password>
@@ -35,6 +40,22 @@
 					<url>https://archiva.cloudesire.com/repository/snapshots/</url>
 				</repository>
 			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>archiva</id>
+					<name>internal</name>
+					<url>https://archiva.cloudesire.com/repository/internal</url>
+				</pluginRepository>
+				<pluginRepository>
+					<snapshots/>
+					<id>snapshots</id>
+					<name>snapshots</name>
+					<url>https://archiva.cloudesire.com/repository/snapshots</url>
+				</pluginRepository>
+			</pluginRepositories>
 		</profile>
 		<profile>
 			<id>sonar</id>
