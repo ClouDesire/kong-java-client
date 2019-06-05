@@ -11,6 +11,8 @@ jobs:
 
       - checkout
 
+      - run: mkdir -p ~/.m2 && cp .circleci/settings.xml ~/.m2/
+
       - restore_cache:
           keys:
             - m2-{{ checksum "pom.xml" }}-v1
@@ -35,4 +37,4 @@ jobs:
 
       - run:
           name: Deploy artifacts
-          command: if [ "$CIRCLE_BRANCH" == "master" ]; then ./mvnw -B deploy -Dmaven.test.skip=true; fi
+          command: if [ "$CIRCLE_BRANCH" == "deploy" ]; then ./mvnw -B deploy -Dmaven.test.skip=true; fi
