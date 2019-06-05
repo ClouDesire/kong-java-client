@@ -22,6 +22,9 @@ public interface PluginService {
 
     Plugin updatePlugin(String nameOrId, Plugin request);
 
+    /**
+     * @deprecated use {@link #addPlugin(Plugin)} or {@link #updatePlugin(String, Plugin)}
+     */
     @Deprecated
     Plugin createOrUpdatePlugin(Plugin request);
 
