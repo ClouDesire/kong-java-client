@@ -123,4 +123,16 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>snapshots</name>
+			<url>https://archiva.cloudesire.com/repository/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/cloudesire/maven-releases/kong-java-client/;publish=1</url>
+		</repository>
+	</distributionManagement>
+
 </project>
