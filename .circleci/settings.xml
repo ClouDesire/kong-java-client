@@ -57,26 +57,11 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
-		<profile>
-			<id>sonar</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<sonar.host.url>https://sonar.cloudesire.com</sonar.host.url>
-				<sonar.login>circleci</sonar.login>
-				<sonar.password>${env.SONAR_PASS}</sonar.password>
-			</properties>
-		</profile>
-
 	</profiles>
+
 	<activeProfiles>
 		<activeProfile>archiva</activeProfile>
 	</activeProfiles>
-	<pluginGroups>
-		<pluginGroup>com.atlassian.maven.plugins</pluginGroup>
-		<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
-	</pluginGroups>
 
 	<interactiveMode>false</interactiveMode>
 </settings>
