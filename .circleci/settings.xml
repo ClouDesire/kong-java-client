@@ -14,9 +14,9 @@
 			<password>${env.ARTIFACTORY_PASS}</password>
 		</server>
 		<server>
-			<id>ossrh</id>
-			<username>${env.OSSRH_USER}</username>
-			<password>${env.OSSRH_PASS}</password>
+			<id>bintray</id>
+			<username>${env.BINTRAY_USER}</username>
+			<password>${env.BINTRAY_PASS}</password>
 		</server>
 	</servers>
 	<profiles>
@@ -27,9 +27,8 @@
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
-					<id>archiva</id>
-					<name>internal</name>
-					<url>https://archiva.cloudesire.com/repository/internal</url>
+					<id>bintray</id>
+					<url>https://api.bintray.com/maven/cloudesire/maven-releases/kong-java-client/;publish=1</url>
 				</repository>
 				<repository>
 					<snapshots>
@@ -38,7 +37,7 @@
 					</snapshots>
 					<id>snapshots</id>
 					<name>snapshots</name>
-					<url>https://archiva.cloudesire.com/repository/snapshots</url>
+					<url>https://archiva.cloudesire.com/repository/snapshots/</url>
 				</repository>
 			</repositories>
 			<pluginRepositories>
@@ -58,26 +57,11 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
-		<profile>
-			<id>sonar</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<sonar.host.url>https://sonar.cloudesire.com</sonar.host.url>
-				<sonar.login>circleci</sonar.login>
-				<sonar.password>${env.SONAR_PASS}</sonar.password>
-			</properties>
-		</profile>
-
 	</profiles>
+
 	<activeProfiles>
 		<activeProfile>archiva</activeProfile>
 	</activeProfiles>
-	<pluginGroups>
-		<pluginGroup>com.atlassian.maven.plugins</pluginGroup>
-		<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
-	</pluginGroups>
 
 	<interactiveMode>false</interactiveMode>
 </settings>

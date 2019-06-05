@@ -11,6 +11,8 @@ jobs:
 
       - checkout
 
+      - run: mkdir -p ~/.m2 && cp .circleci/settings.xml ~/.m2/
+
       - restore_cache:
           keys:
             - m2-{{ checksum "pom.xml" }}-v1
